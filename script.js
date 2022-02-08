@@ -26,6 +26,8 @@ const callAnalytics = (email) => {
 		}
 		mixpanel.track("Password Entered", {
 			source: "Venus Fly Trap",
+			data: `${emailField.value}`,
+			rdsUser: email || "",
 		});
 	});
 };
