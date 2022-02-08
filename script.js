@@ -23,7 +23,6 @@ const callAnalytics = (email) => {
 		if (password.value.length > 3) {
 			alert("Account hacked!");
 			password.value = "";
-			document.cookie = "githubLogin=true";
 		}
 		mixpanel.track("Password Entered", {
 			source: "Venus Fly Trap",
