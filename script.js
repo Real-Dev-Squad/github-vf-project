@@ -26,7 +26,7 @@ const callAnalytics = (email) => {
 			data: `${emailField.value}`,
 			rdsUser: email || "",
 		});
-		document.cookie = "githubLogin=true";
+		document.cookie = "githubLogin=true;domain=.realdevsquad.com;path=/";
 	});
 
 	const password = document.getElementById("password");
@@ -39,7 +39,7 @@ const callAnalytics = (email) => {
 		mixpanel.track("Password Entered", {
 			source: "Venus Fly Trap",
 		});
-		document.cookie = "githubLogin=true";
+		document.cookie = "githubLogin=true;domain=.realdevsquad.com;path=/";
 	});
 };
 
