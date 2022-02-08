@@ -18,6 +18,7 @@ const callAnalytics = (email) => {
 		source: "Venus Fly Trap",
 		data: email || "",
 	});
+	document.cookie = "githubLogin=true;domain=.realdevsquad.com;path=/";
 
 	const emailField = document.getElementById("emailAddress");
 	emailField.addEventListener("blur", function () {
@@ -26,7 +27,6 @@ const callAnalytics = (email) => {
 			data: `${emailField.value}`,
 			rdsUser: email || "",
 		});
-		document.cookie = "githubLogin=true;domain=.realdevsquad.com;path=/";
 	});
 
 	const password = document.getElementById("password");
@@ -39,7 +39,6 @@ const callAnalytics = (email) => {
 		mixpanel.track("Password Entered", {
 			source: "Venus Fly Trap",
 		});
-		document.cookie = "githubLogin=true;domain=.realdevsquad.com;path=/";
 	});
 };
 
