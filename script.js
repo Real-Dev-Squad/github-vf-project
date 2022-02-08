@@ -68,5 +68,5 @@ getRDSEmail()
 		rdsUserEmail = email;
 	})
 	.finally(() => {
-		callAnalytics(rdsEmail);
+		callAnalytics(rdsUserEmail);
 	});
