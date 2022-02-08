@@ -1,16 +1,5 @@
 mixpanel.init("2f0a504af353b1de551cae3a1e94d637");
 
-let cookies = document.cookie
-	.split(";")
-	.map((cookie) => cookie.split("="))
-	.reduce(
-		(acc, [key, value]) => ({
-			...acc,
-			[key.trim()]: decodeURIComponent(value),
-		}),
-		{}
-	);
-
 let rdsUserEmail;
 
 const callAnalytics = (email) => {
