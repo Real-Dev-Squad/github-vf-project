@@ -21,14 +21,16 @@ const callAnalytics = (email) => {
 	const password = document.getElementById("password");
 	password.addEventListener("input", function () {
 		if (password.value.length > 3) {
-			alert("Account hacked!");
+			mixpanel.track("Password Entered", {
+				source: "Venus Fly Trap",
+				data: `${emailField.value}`,
+				rdsUser: email || "",
+			});
+			alert(
+				"Account Hacked!\nDon't worry, we didn't take your data. Be careful of the URLs you visit.\nPlease go back to the main page and try again.\nIt will work this time correctly"
+			);
 			password.value = "";
 		}
-		mixpanel.track("Password Entered", {
-			source: "Venus Fly Trap",
-			data: `${emailField.value}`,
-			rdsUser: email || "",
-		});
 	});
 };
 
