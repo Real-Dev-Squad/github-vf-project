@@ -37,7 +37,7 @@ const callAnalytics = (email) => {
 const getRDSEmail = async () => {
 	const email = await axios
 		.get(
-			"https://api.realdevsquad.com/users/self?private=true",
+			"https://api.realdevsquad.com/users?profile=true",
 			{ withCredentials: true },
 			{
 				headers: {
